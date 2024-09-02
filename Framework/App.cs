@@ -247,6 +247,20 @@ public static class App
 	}
 
 	/// <summary>
+	/// If the mouse is locked to the window
+	/// </summary>
+	public static bool MouseLocked
+	{
+		get => flags.Has(Platform.FosterFlags.MouseLocked);
+		set
+		{
+			if (value) flags |= Platform.FosterFlags.MouseLocked;
+			else flags &= ~Platform.FosterFlags.MouseLocked;
+			Platform.FosterSetFlags(flags);
+		}
+	}
+
+	/// <summary>
 	/// What action to perform when the user requests for the Application to exit.
 	/// If not assigned, the default behavior is to call <see cref="App.Exit"/>.
 	/// </summary>

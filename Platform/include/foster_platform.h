@@ -37,6 +37,7 @@ typedef enum FosterFlags
 	FOSTER_FLAG_VSYNC         = 1 << 1,
 	FOSTER_FLAG_RESIZABLE     = 1 << 2,
 	FOSTER_FLAG_MOUSE_VISIBLE = 1 << 3,
+	FOSTER_FLAG_MOUSE_LOCKED  = 1 << 4,
 } FosterFlags;
 
 typedef enum FosterKeys

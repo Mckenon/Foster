@@ -439,6 +439,9 @@ void FosterSetFlags(FosterFlags flags)
 		// mouse visible
 		SDL_ShowCursor(FOSTER_CHECK(flags, FOSTER_FLAG_MOUSE_VISIBLE) ? SDL_ENABLE : SDL_DISABLE);
 
+		// mouse locked
+		SDL_SetWindowGrab(fstate.window, FOSTER_CHECK(flags, FOSTER_FLAG_MOUSE_LOCKED) ? SDL_TRUE : SDL_FALSE);
+
 		// vsync
 		if (fstate.device.renderer == FOSTER_RENDERER_OPENGL)
 		{

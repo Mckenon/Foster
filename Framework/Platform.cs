@@ -14,6 +14,7 @@ internal static partial class Platform
 		Vsync = 1 << 1,
 		Resizable = 1 << 2,
 		MouseVisible = 1 << 3,
+		MouseLocked = 1 << 4,
 	}
 
 	public enum FosterEventType : int
